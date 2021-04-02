@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAAG",
+    "sources": [
+        "style.sass",
+        "layouts/_general.sass",
+        "layouts/_card.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
