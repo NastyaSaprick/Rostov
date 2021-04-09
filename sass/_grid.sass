@@ -1,7 +1,14 @@
+//сетка - разметка рабочего поля
 .container
     max-width: 1256px
     margin: auto
     width: 89%
-
-a
-    text-decoration: none
+.row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+.col
+  &-30
+    flex-basis: 30%
+  &-50
+    flex-basis: 50%
