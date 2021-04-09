@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
   const modal = document.querySelector('.modal');
@@ -13,5 +14,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   closeBtn.addEventListener('click', switchModal)
+
+});
+*/
+
+
+/*модальное окно */
+// модальное окно
+$(document).ready(function () {
+  var modal = $('.modal'),
+  modalBtn = $('[data-toggle=modal]'),
+  closeBtn = $('.modal__close'),
+  missModal = $('.modal')
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function() {
+    modal.toggleClass('modal--visible');
+  });
+
+
+  /*сдайдер */
+  
 
 });
