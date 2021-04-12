@@ -402,7 +402,8 @@ body {
   font-size: 1rem; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #fff; }
 
 img {
   max-width: 100%; }
@@ -446,6 +447,9 @@ img {
         height: 2px;
         background-color: #E3B873;
         margin: 0 10px; }
+  .section-subtitle--light {
+    color: #fff;
+    font-size: 1.07rem; }
 
 .header {
   position: fixed;
@@ -593,6 +597,7 @@ img {
   .swiper-slide__heading {
     font-size: 1.285rem;
     line-height: 1.78rem;
+    font-weight: 400;
     font-family: 'Yeseva One', cursive;
     color: #E3B873;
     text-transform: uppercase;
@@ -672,6 +677,55 @@ img {
   margin: 0 auto;
   margin-top: 1.71rem;
   text-align: center; }
+
+.stages {
+  padding-top: 450px;
+  margin-top: -430px; }
+  .stages__row {
+    margin-top: -80px; }
+  .stages__col-50 {
+    padding-top: 100px; }
+
+.swiper-slide__info {
+  font-size: 1.07rem;
+  line-height: 1.78rem; }
+
+.swiper-slide__subtitle {
+  margin-top: 92px;
+  padding-bottom: 22px;
+  font-size: 1.28;
+  line-height: 1.78rem;
+  text-transform: uppercase; }
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 44px; }
+  .counter-Number {
+    display: flex;
+    flex-direction: column;
+    max-width: 130px;
+    margin-right: 50px;
+    color: rgba(255, 255, 255, 0.3); }
+    .counter-Number:hover {
+      color: #fff; }
+  .counter-figure {
+    font-size: 15px;
+    line-height: 21px;
+    text-transform: uppercase;
+    display: flex;
+    position: relative; }
+    .counter-figure::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 16px;
+      height: 2px;
+      background: rgba(227, 184, 115, 0.3); }
 
 .modal {
   opacity: 0;

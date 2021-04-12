@@ -1,0 +1,51 @@
+.stages
+  padding-top: 450px
+  margin-top: -430px
+  &__row
+    margin-top: -80px
+  &__col-50
+    padding-top: 100px
+
+.swiper
+  &-slide
+    &__info
+      font-size: 1.07rem
+      line-height: 1.78rem
+    &__subtitle
+      margin-top: 92px
+      padding-bottom: 22px
+      font-size: 1.28
+      line-height: 1.78rem
+      text-transform: uppercase
+
+.counter
+  display: flex
+  justify-content: space-between
+  align-items: flex-start 
+  width: 100%
+  flex-wrap: wrap
+  margin-bottom: 44px
+  &-Number
+    display: flex
+    flex-direction: column
+    max-width: 130px
+    margin-right: 50px
+    color: rgba($light, 0.3)
+    &:hover
+      color: $light
+
+  &-figure
+    font-size: 15px
+    line-height: 21px
+    text-transform: uppercase
+    display: flex
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 16px
+        height: 2px
+        background: rgba($primary, 0.3)
+  &-text
