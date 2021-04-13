@@ -751,6 +751,7 @@ img {
 
 .stages {
   padding-top: 450px;
+  padding-bottom: 501px;
   margin-top: -430px; }
   .stages__row {
     margin-top: -80px; }
@@ -797,6 +798,68 @@ img {
       width: 16px;
       height: 2px;
       background: rgba(227, 184, 115, 0.3); }
+
+.team {
+  margin-top: -450px; }
+  .team__text {
+    max-width: 32rem;
+    font-size: 1.43rem;
+    line-height: 1.93rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 23px;
+    margin-bottom: 70px;
+    color: #fff; }
+  .team__card {
+    max-width: 272px;
+    width: 100%; }
+    .team__card--idea, .team__card--disagn, .team__card--portfolio {
+      width: 70px;
+      height: 70px;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+      position: relative;
+      left: -35px;
+      top: 35px; }
+    .team__card--idea {
+      background: #E3B873 url(../img/team/idea.svg) no-repeat center; }
+    .team__card--disagn {
+      background: #E3B873 url(../img/team/designer.svg) no-repeat center; }
+    .team__card--portfolio {
+      background: #E3B873 url(../img/team/portfolio.svg) no-repeat center; }
+    .team__card__text {
+      max-width: 233px;
+      margin-top: -81px; }
+    .team__card__title {
+      font-size: 16px;
+      line-height: 25px;
+      text-align: center;
+      margin-bottom: 8px; }
+    .team__card__subtitle {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: #959595;
+      margin-top: 0; }
+    .team__card__pricetag {
+      font-size: 13px;
+      line-height: 20px;
+      padding: 13px 45px; }
+  .team__footnotes {
+    position: relative;
+    margin: auto;
+    margin-top: 128px;
+    max-width: 568px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 34px; }
+    .team__footnotes::after {
+      content: '';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      top: -8px;
+      left: 45%;
+      background: #E3B873; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover; }
