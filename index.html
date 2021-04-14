@@ -325,10 +325,11 @@
                         <img src="img/design.svg" alt="design">
                     </div>
                     <!-- /.section-title__img -->
+                    <p class="section-title__text design-title__text">
+                      Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ
+                  </p>
                 </div>
-                <p class="design__text">
-                    Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ
-                </p>
+                
                 <div class="row design__row">
                     <div class="col-30">
                         <div class="card types__card">
@@ -581,10 +582,11 @@
                       <img src="img/team/team-icon.svg" alt="team">
                   </div>
                   <!-- /.section-title__img -->
+                  <p class="section-title__text team-title__text section-title__text--light">
+                    Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
+                  </p>
               </div>
-              <p class="team__text">
-                Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
-              </p>
+              
               <div class="row team__row">
                   <div class="col-30">
                       <div class="card team__card">
@@ -639,6 +641,70 @@
           <!-- /.container -->
       </section>
       <!-- /.section team -->
+
+      <section class="section customers">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="section-title__heading">Наши клиенты</h2>
+            <div class="section-title__img">
+                <img src="img/customers/customers.svg" alt="team">
+            </div>
+            <!-- /.section-title__img -->
+            <p class="section-title__text customers-title__text">
+              80% наших клиентов рекомендуют нас своим знакомым и друзьям
+          </div>
+
+          <div class="row">
+            <div class="col-30">
+              <div class="card customers-card">
+                <div class="card__human">
+                  <img src="img/customers/catherine.png" alt="картинка" class="card__image">
+                  <h3 class="card__human__persona">Савельева Екатерина Львовна</h3>
+                </div>
+                <p class="card__info">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
+                </p>
+                <!-- /.card__human -->
+              </div>
+              <!-- /.card customers-card -->
+            </div>
+            <!-- /.col-30 -->
+            <div class="col-30">
+              <div class="card customers-card">
+                <div class="card__human">
+                  <img src="img/customers/mihatl.png" alt="картинка" class="card__image">
+                  <h3 class="card__human__persona">Большов Михаил Анатольевич</h3>
+                </div>
+                <p class="card__info">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.
+                </p>
+                <!-- /.card__human -->
+              </div>
+              <!-- /.card customers-card -->
+            </div>
+            <!-- /.col-30 -->
+            <div class="col-30">
+              <div class="card customers-card">
+                <div class="card__human">
+                  <img src="img/customers/daniel.png" alt="картинка" class="card__image">
+                  <h3 class="card__human__persona">Хасанов Даниил Муратович</h3>
+                </div>
+                <p class="card__info">
+                  Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. 
+                </p>
+                <!-- /.card__human -->
+              </div>
+              <!-- /.card customers-card -->
+            </div>
+            <!-- /.col-30 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        
+        <!-- /.container -->
+      </section>
+      <!-- /.section customers -->
+      
     </main>
     <!-- /.main -->
 
@@ -677,8 +743,7 @@
         </div>
         <!-- /.footer-wrap -->
 
-        <div class="map footer__map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1e38c1789b149e8977579d39e3800322c4ab221195b680214ecfa42899e32ff6&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div class="map footer__map" id="map">
         </div>
         <!-- /.map -->
       </div>
@@ -747,6 +812,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0948e151-d378-4db3-b4ba-7d949e6e6859&lang=en_US" type="text/javascript"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

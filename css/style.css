@@ -445,9 +445,13 @@ img {
         background-color: #E3B873;
         margin-left: 2rem; }
     .section-title__text {
-      font-size: 1.28rem;
+      font-size: 1.42rem;
       line-height: 2.07rem;
-      max-width: 31.57rem; }
+      text-align: center;
+      margin: auto;
+      margin-top: 24px; }
+      .section-title__text--light {
+        color: #fff; }
     .section-title__img {
       display: flex;
       justify-content: center;
@@ -738,6 +742,9 @@ img {
   color: #fff;
   padding: 1.214rem 2.71rem; }
 
+.design-title__text {
+  max-width: 52.93rem; }
+
 .design__row {
   margin-top: 2.85rem; }
 
@@ -801,6 +808,8 @@ img {
 
 .team {
   margin-top: -550px; }
+  .team-title__text {
+    max-width: 32rem; }
   .team__text {
     max-width: 32rem;
     font-size: 1.43rem;
@@ -860,6 +869,14 @@ img {
       top: -8px;
       left: 45%;
       background: #E3B873; }
+
+.customers-title__text {
+  max-width: 25.7rem;
+  margin-bottom: 38px; }
+
+.customers-card {
+  box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
+  max-width: 26.85rem; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover; }
