@@ -751,7 +751,7 @@ img {
 
 .stages {
   padding-top: 450px;
-  padding-bottom: 501px;
+  padding-bottom: 601px;
   margin-top: -430px; }
   .stages__row {
     margin-top: -80px; }
@@ -800,7 +800,7 @@ img {
       background: rgba(227, 184, 115, 0.3); }
 
 .team {
-  margin-top: -450px; }
+  margin-top: -550px; }
   .team__text {
     max-width: 32rem;
     font-size: 1.43rem;
@@ -898,6 +898,9 @@ img {
   .footer__menu {
     background: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    margin-bottom: 4rem;
+    min-height: 465px; }
 
 .modal {
   opacity: 0;
