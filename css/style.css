@@ -876,7 +876,49 @@ img {
 
 .customers-card {
   box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
-  max-width: 26.85rem; }
+  max-width: 26.85rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 63px;
+  position: relative; }
+
+.customers__card__pricetag {
+  display: flex;
+  font-size: 17px;
+  line-height: 24px;
+  max-width: 300px;
+  justify-content: space-between;
+  width: 100%; }
+
+.customers__pricetag__blok1, .customers__pricetag__blok2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 130px; }
+
+.customers__pricetag__blok1 {
+  border-right: 2px solid #fff; }
+
+.customers__pricetag__img {
+  margin-right: 10px; }
+
+.card__human {
+  display: flex;
+  align-items: center;
+  padding-bottom: 22px;
+  color: #181818; }
+  .card__human__persona {
+    font-size: 18px;
+    line-height: 23px;
+    margin-left: 23px;
+    max-width: 190px; }
+
+.card__info {
+  max-width: 324px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 180%;
+  color: #959595; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover; }
