@@ -117,11 +117,12 @@ $(document).click(function (keyClose) {
     errorClass: "invalid",
     rules: {
       // строчное правило
-      usernName: {
+      userName: {
         required: true,
         minlength: 2
       },
-      userpPhone: "required",
+      userPhone: "required",
+      // правило - обьект (блок)
     }, // сообщения
     messages: {
       userName:{
@@ -129,6 +130,52 @@ $(document).click(function (keyClose) {
         minlength: "Имя не короче двух букв"
       },
       userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Emal",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function(response) {
+              alert(' Форма отправлена, мы скоро свяжемся с вами');
+              //обнуление формы после отправки
+              $(form)[0].reset();
+              modal.removClass('modal--visible');
+          }
+      });
+  }
+  });
+
+  //валидация формы для footer 
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // правило - обьект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName:{
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Emal",
+        email: "Введите в формате: name@domain.com"
+      }
     },
     submitHandler: function(form) {
       $.ajax({
