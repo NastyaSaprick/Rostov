@@ -25,12 +25,16 @@
 .input
     background-color: transparent
     border: none
+    color: $light
     border-bottom: 1px solid rgba(54, 54, 54, 0.3)
     font-size: 1.285rem
-    color: $light 
     padding: 0.5rem 0
     &::placeholder
         color: $light
+    &--dark
+        color: $dark
+        &::placeholder
+          color: $dark
 .policy
     &__checkbox
         opacity: 0
@@ -60,6 +64,5 @@ label
 input
   &.invalid
     border-bottom: 1px solid tomato
-
-
+ 
     

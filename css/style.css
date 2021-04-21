@@ -346,9 +346,9 @@ template {
 .input {
   background-color: transparent;
   border: none;
+  color: #fff;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
-  color: #fff;
   padding: 0.5rem 0; }
   .input::-moz-placeholder {
     color: #fff; }
@@ -356,6 +356,14 @@ template {
     color: #fff; }
   .input::placeholder {
     color: #fff; }
+  .input--dark {
+    color: #131313; }
+    .input--dark::-moz-placeholder {
+      color: #131313; }
+    .input--dark:-ms-input-placeholder {
+      color: #131313; }
+    .input--dark::placeholder {
+      color: #131313; }
 
 .policy__checkbox {
   opacity: 0;
@@ -698,6 +706,12 @@ img {
 
 .control__policy {
   flex-basis: 100%; }
+  .control__policy__label {
+    justify-content: center;
+    margin-top: 10px; }
+
+.control__button {
+  padding: 15px 55px 15px; }
 
 .video__play {
   position: relative;

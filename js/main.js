@@ -96,7 +96,53 @@ $(document).click(function (keyClose) {
         required: "Обязательно укажите Emal",
         email: "Введите в формате: name@domain.com"
       }
-    }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function(response) {
+              alert(' Форма отправлена, мы скоро свяжемся с вами');
+              //обнуление формы после отправки
+              $(form)[0].reset();
+              modal.removClass('modal--visible');
+          }
+      });
+  }
+  });
+
+   //валидация формы для блока контроль
+   $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      usernName: {
+        required: true,
+        minlength: 2
+      },
+      userpPhone: "required",
+    }, // сообщения
+    messages: {
+      userName:{
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function(response) {
+              alert(' Форма отправлена, мы скоро свяжемся с вами');
+              //обнуление формы после отправки
+              $(form)[0].reset();
+              modal.removClass('modal--visible');
+          }
+      });
+  }
   });
 //маска для номера
 
