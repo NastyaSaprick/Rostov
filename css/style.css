@@ -385,6 +385,8 @@ template {
     margin-right: 0.64rem; }
   .policy__label--center {
     justify-content: center; }
+  .policy__label--light {
+    color: #fff; }
 
 label.invalid {
   color: tomato; }
@@ -405,8 +407,14 @@ input.invalid {
 .col-30 {
   flex-basis: 30%; }
 
+.col-40 {
+  flex-basis: 40%; }
+
 .col-50 {
   max-width: 50%; }
+
+.col-60 {
+  flex-basis: 60%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -475,7 +483,6 @@ img {
     font-size: 1.07rem; }
 
 .header {
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -715,7 +722,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -755,6 +763,95 @@ img {
   background-color: #E3B873;
   color: #fff;
   padding: 1.214rem 2.71rem; }
+
+.measurer {
+  background: url(../img/measurer-bg.jpg) no-repeat left;
+  padding-top: 125px; }
+  .measurer__block {
+    position: relative; }
+    .measurer__block__circle {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      margin-top: -30px;
+      margin-left: -25rem;
+      border-right: 4px solid #E3B873;
+      border-radius: 50%;
+      transform: rotate(10deg); }
+    .measurer__block__types {
+      position: relative;
+      z-index: 50; }
+  .measurer__application {
+    padding: 0 49px;
+    background: #131313; }
+  .measurer__form {
+    max-width: 410px; }
+  .measurer__button {
+    margin-bottom: 27px; }
+
+.subtitle--light {
+  padding-top: 30px;
+  margin: auto;
+  max-width: 297px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 39px;
+  color: #fff; }
+
+.type {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .type__number {
+    position: relative;
+    background: #E3B873;
+    border-radius: 30px;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Yaseva One', cursive;
+    margin-right: 20px; }
+    .type__number::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -1rem;
+      margin-left: -1rem;
+      width: 4.982rem;
+      height: 4.982rem;
+      background: #fff;
+      border-radius: 50%;
+      z-index: -1; }
+  .type__text {
+    color: #131313;
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 364px;
+    font-weight: bold; }
+
+.type-1 {
+  margin-left: 250px;
+  margin-top: 50px; }
+
+.type-2 {
+  margin-left: 320px;
+  margin-top: 200px; }
+
+.type-3 {
+  margin-left: 320px;
+  margin-top: 350px; }
+
+.type-4 {
+  margin-left: 250px;
+  margin-top: 490px; }
 
 .design-title__text {
   max-width: 52.93rem; }
@@ -802,9 +899,10 @@ img {
     flex-direction: column;
     max-width: 130px;
     margin-right: 50px;
-    color: rgba(255, 255, 255, 0.3); }
+    color: white;
+    opacity: 0.3; }
     .counter-Number:hover {
-      color: #fff; }
+      opacity: 1; }
   .counter-figure {
     font-size: 15px;
     line-height: 21px;
@@ -818,7 +916,7 @@ img {
       left: 0;
       width: 16px;
       height: 2px;
-      background: rgba(227, 184, 115, 0.3); }
+      background: #e3b873; }
 
 .team {
   margin-top: -550px; }
@@ -884,37 +982,34 @@ img {
       left: 45%;
       background: #E3B873; }
 
-.customers-title__text {
-  max-width: 25.7rem;
-  margin-bottom: 38px; }
-
-.customers-card {
-  box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
-  max-width: 26.85rem;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 63px;
-  position: relative; }
-
-.customers__card__pricetag {
-  display: flex;
-  font-size: 17px;
-  line-height: 24px;
-  max-width: 300px;
-  justify-content: space-between;
-  width: 100%; }
-
-.customers__pricetag__blok1, .customers__pricetag__blok2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 130px; }
-
-.customers__pricetag__blok1 {
-  border-right: 2px solid #fff; }
-
-.customers__pricetag__img {
-  margin-right: 10px; }
+.customers {
+  padding-bottom: 25.2rem; }
+  .customers-title__text {
+    max-width: 25.7rem;
+    margin-bottom: 38px; }
+  .customers-card {
+    box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
+    max-width: 26.85rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 63px;
+    position: relative; }
+  .customers__card__pricetag {
+    display: flex;
+    font-size: 17px;
+    line-height: 24px;
+    max-width: 300px;
+    justify-content: space-between;
+    width: 100%; }
+  .customers__pricetag__blok1, .customers__pricetag__blok2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 130px; }
+  .customers__pricetag__blok1 {
+    border-right: 2px solid #fff; }
+  .customers__pricetag__img {
+    margin-right: 10px; }
 
 .card__human {
   display: flex;
@@ -932,7 +1027,33 @@ img {
   font-weight: normal;
   font-size: 15px;
   line-height: 180%;
-  color: #959595; }
+  color: #959595;
+  position: relative; }
+
+.card__human__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: -1.5rem;
+  margin-top: 3.357rem;
+  max-width: 21.98rem;
+  background-color: #E3B873;
+  color: #fff;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.214rem; }
+
+.card__human__item {
+  display: flex;
+  align-items: center;
+  padding: 0.714rem 1.428rem;
+  font-weight: normal;
+  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+  .card__human__item:first-child {
+    border-right: 1px solid #fff; }
+
+.card__human__image {
+  padding-right: 1.14rem; }
 
 .footer {
   background: #131313 url(../img/footer-bg.jpg) no-repeat center/cover; }
@@ -941,7 +1062,8 @@ img {
     max-width: 63.07rem;
     margin: auto;
     margin-bottom: 3.714rem;
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    margin-top: -222px; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -974,6 +1096,36 @@ img {
   .footer__map {
     margin-bottom: 4rem;
     min-height: 465px; }
+  .footer__contact {
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 33.6rem;
+    margin-bottom: 43px; }
+    .footer__contact__text {
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      color: #E3B873;
+      font-family: 'Yeseva One';
+      text-transform: uppercase; }
+
+.contact__button {
+  max-width: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .contact__button__link {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E3B873;
+    align-items: center;
+    display: flex;
+    justify-content: center; }
 
 .modal {
   opacity: 0;

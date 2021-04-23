@@ -1,4 +1,5 @@
 .customers
+  padding-bottom: 25.2rem
   &-title__text
     max-width: 25.7rem
     margin-bottom: 38px
@@ -45,3 +46,28 @@
     font-size: 15px
     line-height: 180%
     color: $secondary
+    position: relative
+
+  &__human
+    &__text
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      margin-left: -1.5rem
+      margin-top: 3.357rem
+      max-width: 21.98rem
+      background-color: $primary 
+      color: $light
+      font-family: 'Yeseva One', cursive
+      font-size: 1.214rem
+    &__item
+      display: flex
+      align-items: center  
+      padding: 0.714rem 1.428rem  
+      font-weight: normal   
+      box-shadow: 5px 5px 20px rgba($primary, 0.5)
+      &:first-child
+          border-right: 1px solid $light         
+    &__image
+        padding-right: 1.14rem

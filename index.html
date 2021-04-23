@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -203,8 +204,10 @@
                     </div>
                     <!-- /.section-title__img -->
                 </div>
-                <div class="control__video video">
-                  <img src="img/play-icon.svg" alt="play-icon" class="video__play">
+                <div class="control__video video" id="player">
+                  <a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=1fmvUFikoY0">
+                    <img src="img/play-icon.svg" alt="play-icon"></a>
+                  <!--<script src="https://www.youtube.com/iframe_api"></script>-->
                 </div>
                 <!-- /.control__video video -->
                 <p class="control__text">
@@ -214,12 +217,12 @@
                 <form action="send.php" method="POST" class="form control__form">
                   <div class="control__input-group">
                     <label for="user-name" class="label form__label">Имя</label>
-                    <input type="text" name="userName" class="input input--dark form__input control__input" id="user-name" placeholder="Как вас зовут:">     
+                    <input type="text" name="userName" class="input input--dark form__input control__input" id="control__user-name" placeholder="Как вас зовут:">     
                   </div>       
                   
                   <div class="control__input-group">
                     <label for="user-phone" class="label form__label ">Телефон</label>
-                    <input type="tel" name="userPhone" class="input input--dark form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+                    <input type="tel" name="userPhone" class="input input--dark form__input control__input" id="control__user-phone" placeholder="Ваш номер телефона:">
                   </div>
                   
                   
@@ -317,6 +320,78 @@
             <!-- /.container -->
         </section>
         <!-- /.section types -->
+
+
+        <section class="section measurer">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-60">
+                <div class="measurer__block">
+                  <div class="measurer__block__types types">
+                    <div class="types__type type type-1">
+                      <span class="type__number">01</span>
+                      <p class="type__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</p>
+                    </div>
+                    <!-- /.types__type 1 -->
+
+                    <div class="types__type type type-2">
+                      <span class="type__number">02</span>
+                      <p class="type__text">Бесплатный замер</p>
+                    </div>
+                    <!-- /.types__type 2 -->
+
+                    <div class="types__type type type-3">
+                      <span class="type__number">03</span>
+                      <p class="type__text">Бесплатная консультация</p>
+                    </div>
+                    <!-- /.types__type 3 -->
+
+                    <div class="types__type type type-4">
+                      <span class="type__number">04</span>
+                      <p class="type__text">Получите смету расходов и сроки вашего будущего ремонта</p>
+                    </div>
+                    <!-- /.types__type 4 -->
+                  </div>
+                  <div class="measurer__block__circle"></div>
+                  <!-- /.measurer__block__circle -->
+                </div>
+                <!-- /.measurer__block -->
+              </div>
+              <!-- /.col-60 -->
+              <div class="col-40 measurer__application">
+                <h2 class="measurer__subtitle  subtitle--light">Оставьте заявку на бесплатный выезд замерщика</h2>
+                <form action="send.php" method="POST" class="form measurer__form">
+                  <div class="input-group modal__input-group">
+                    <label for="user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" name="userName" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут:">
+                  </div>
+                  <div class="input-group modal__input-group">
+                    <label for="user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="userPhone" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+                  </div>
+                  <div class="input-group modal__input-group">
+                    <label for="user-email" class="label form__label label--light">Email</label>
+                    <input type="email" name="userEmail" class="input form__input modal__input" id="user-email" placeholder="Ваш email:">
+                  </div>
+                                
+                    
+                    
+                    <div class="policy modal__policy">
+                        <input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+                        <label for="modal-policy-checkbox" class="policy__label--light policy__label">Я соглашаюсь с обработкой данных</label>
+                    </div>
+                    
+                    <button class="button button--primary modal__button measurer__button">Отправить заявку</button>
+                </form>  
+              </div>
+              <!-- /.measurer__form -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /.measurer -->
 
         <section class="section design">
             <div class="container">
@@ -666,6 +741,16 @@
                   Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.
                 </p>
                 <!-- /.card__human -->
+                <div class="card__human__text">
+                  <strong class="card__human__item">
+                      <img src="img/customers/square.svg" alt="Размер 1" class="card__human__image">
+                      40 М <sup>2</sup>
+                  </strong>
+                  <strong class="card__human__item">
+                      <img src="img/customers/time.svg" alt="Размер 1" class="card__human__image">
+                      48 дней
+                  </strong>
+              </div>
               </div>
               <!-- /.card customers-card -->
               
@@ -681,6 +766,16 @@
                   Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.
                 </p>
                 <!-- /.card__human -->
+                <div class="card__human__text"> 
+                  <strong class="card__human__item">
+                      <img src="img/customers/square.svg" alt="Размер 1" class="card__human__image">
+                      40 М <sup>2</sup>
+                  </strong>
+                  <strong class="card__human__item">
+                      <img src="img/customers/time.svg" alt="Размер 1" class="card__human__image">
+                      48 дней
+                  </strong>
+              </div>
               </div>
               <!-- /.card customers-card -->
             </div>
@@ -695,6 +790,16 @@
                   Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. 
                 </p>
                 <!-- /.card__human -->
+                <div class="card__human__text">
+                  <strong class="card__human__item">
+                      <img src="img/customers/square.svg" alt="Размер 1" class="card__human__image">
+                      40 М <sup>2</sup>
+                  </strong>
+                  <strong class="card__human__item">
+                      <img src="img/customers/time.svg" alt="Размер 1" class="card__human__image">
+                      48 дней
+                  </strong>
+              </div>
               </div>
               <!-- /.card customers-card -->
             </div>
@@ -719,17 +824,17 @@
           <form action="send.php" method="POST" class="form footer__form">
             <div class="input-group footer__input-group">
               <label for="user-name" class="label form__label label--light">Имя</label>
-              <input type="text" name="userName" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут:"> 
+              <input type="text" name="userName" class="input form__input modal__input" id="footer__user-name" placeholder="Как вас зовут:"> 
             </div>
             <!--/input-group footer__input-group-->
             <div class="input-group footer__input-group">
               <label for="user-phone" class="label form__label label--light">Телефон</label>
-              <input type="tel" name="userPhone" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+              <input type="tel" name="userPhone" class="input form__input modal__input" id="footer__user-phone" placeholder="Ваш номер телефона:">
             </div>
             <!--/input-group footer__input-group-->
             <div class="input-group footer__input-group footer__input-group--full-width">
               <label for="user-question" class="label form__label label--light">Вопрос</label>
-              <input type="email" name="userEmail" class="input form__input modal__input" id="user-email" placeholder="Ваш email:">
+              <input type="email" name="userEmail" class="input form__input modal__input" id="footer__user-email" placeholder="Ваш email:">
             </div>
             <!--/input-group footer__input-group-->
                        
@@ -744,6 +849,17 @@
         </form>
         </div>
         <!-- /.footer-wrap -->
+        <div class="footer__contact">
+          <p class="footer__contact__text">Ростов на дону, Торговый центр Plaza
+            Прямой телефон +7 (999) 768 32 99</p>
+            
+          <div class="footer__contact__button contact__button">
+            <a href="#" class="contact__button__link"><img src="img/insta.svg" alt="картинка"></a>
+            <a href="#" class="contact__button__link"><img src="img/mail.svg" alt="картинка"></a>
+          </div>
+          <!-- /.footer__contact__button -->
+        </div>
+        <!-- /.footer__contact -->
 
         <div class="map footer__map" id="map">
         </div>
@@ -816,6 +932,7 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?sapikey=0948e151-d378-4db3-b4images-7d949e6e6859&lang=en_US" type="text/javascript"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

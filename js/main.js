@@ -112,7 +112,7 @@ $(document).click(function (keyClose) {
   }
   });
 
-   //валидация формы для блока контроль
+   //валидация формы для блока с выещдом замерщика
    $('.control__form').validate({
     errorClass: "invalid",
     rules: {
@@ -150,6 +150,47 @@ $(document).click(function (keyClose) {
   }
   });
 
+  //валидация формы
+  $('.measurer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // правило - обьект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName:{
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Emal",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function(response) {
+              alert(' Форма отправлена, мы скоро свяжемся с вами');
+              //обнуление формы после отправки
+              $(form)[0].reset();
+              modal.removClass('modal--visible');
+          }
+      });
+  }
+  });
   //валидация формы для footer 
   $('.footer__form').validate({
     errorClass: "invalid",
@@ -264,6 +305,24 @@ $('[type=tel]').mask('+7(000)-000-00-00', { placeholder: "+7(___)-___-__-__" });
               .add(myPlacemarkWithContent);
       });
     }
-      
 
+    //видео 
+    /*
+    var player;
+    $('.video__play').on('click',
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: '1fmvUFikoY0',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
+
+    function videoPlay(event) {
+      event.target.playVideo();
+    }
+     */
 });
