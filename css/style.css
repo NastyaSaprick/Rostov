@@ -649,6 +649,11 @@ img {
 
 .projects {
   padding-bottom: 30rem; }
+  .projects__title-text {
+    max-width: 470px;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 42px; }
 
 .swiper-slide {
   display: flex;
@@ -1159,8 +1164,7 @@ img {
     max-width: 63.07rem;
     margin: auto;
     margin-bottom: 3.714rem;
-    padding: 2.5rem;
-    margin-top: -222px; }
+    padding: 2.5rem; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
