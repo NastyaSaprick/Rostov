@@ -325,4 +325,37 @@ $('[type=tel]').mask('+7(000)-000-00-00', { placeholder: "+7(___)-___-__-__" });
       event.target.playVideo();
     }
      */
+
+  //кнопки
+  $(document).ready(function(){
+    $(function(){
+        if ($(window).width() > 900){
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 900) {
+                  $('.header__scroll-up').animate({
+                      opacity: 1
+                  }, 1);
+              }
+              else {
+                  $('.header__scroll-up').animate({
+                      opacity: 0
+                  }, 1);
+              }
+          });
+        };
+    });
+    $('.header__scroll-up').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+    $('.hero__scroll-down').click(function () {
+        $('body,html').animate({
+            scrollTop: 1000
+        }, 500);
+        return false;
+    });
+    
+  });
 });

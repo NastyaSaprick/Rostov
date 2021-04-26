@@ -1,6 +1,7 @@
 .measurer
   background: url(../img/measurer-bg.jpg) no-repeat left
   padding-top: 125px
+  margin-bottom: 17.15rem
   //блок с кругом
   &__block
     position: relative
@@ -20,10 +21,10 @@
   &__application
     padding: 0 49px
     background: $dark
-  &__form
-    max-width: 410px
   &__button
     margin-bottom: 27px
+    margin-left: 220px
+    
 .subtitle
   &--light
     padding-top: 30px
@@ -34,7 +35,7 @@
     line-height: 25px
     padding-bottom: 39px
     color: $light
-
+//настройки круга
 .type
   position: absolute
   display: flex
@@ -84,3 +85,24 @@
 .type-4
   margin-left: 250px
   margin-top: 490px
+
+.discount
+  display: flex
+  width: 100%
+  margin: auto
+  max-width: 415px
+  justify-content: space-between
+  align-items: center
+  margin-bottom: -100px
+  &__text
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15)
+    color: $primary
+    font-size: 20px
+    line-height: 25px
+    max-width: 320px
+    font-weight: bold
+  &__image
+    background: $primary
+    padding: 10px
+    border-radius: 50%
+    box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2)
